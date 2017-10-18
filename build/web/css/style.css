@@ -259,7 +259,7 @@ input[type=text]  {
 .form-control::-moz-placeholder { color: white; }  /* Mozilla Firefox 19+ */
 .form-control:-ms-input-placeholder { color: white; }  /* Internet Explorer 10-11 */
 .form-control::-ms-input-placeholder { color: white; }  /* Microsoft Edge */
-
+.form-control::-webkit-input-placeholder {color: white;} /* Chrome/Opera/Safari */
 
 /*==form==*/
 
