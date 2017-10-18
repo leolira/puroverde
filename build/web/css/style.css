@@ -1,0 +1,268 @@
+/*
+Extra small devices Phones (<768px) (col-xs)
+Small devices Tablets (≥768px) (col-sm)
+Medium devices Desktops (≥992px) (col-md)
+Large devices Desktops (≥1200px) (col-lg)
+
+class="col-lg-? col-md-? col-sm col-xs-?"
+*/
+
+/*==geral==*/
+div .row {
+    border: dashed 0px red;
+}
+
+body {
+    
+    background-image: url("../image/bglogo.jpg");
+    background-size: 500px 500px;
+}
+
+#corpo {
+    background-image: url("../image/bglogo.jpg");
+    background-size: 500px 500px;
+    width: auto;
+}
+/*==geral==*/
+
+
+/*==logo==*/
+
+#registrar {
+    background-color: #72B844;
+    text-align: right;
+    height: auto;
+    margin: 0px;
+    padding: 0px 10px;
+}
+
+#registrar a {
+    color: #FFFFFF;
+    font-size: auto;
+    padding: 0;
+    font-family: 'Abel', sans-serif;
+
+}
+
+
+#logo {
+    
+    padding: 20px 5px;
+    
+    
+}
+
+#bglogo {
+    background-color: #FFFFFF;
+}
+
+.img-responsive {
+    
+    width: 100%;
+}
+
+/*==logo==*/
+
+
+/*==dash==*/
+
+#promo {
+    
+   float:right;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    padding: 0px;
+
+
+}
+
+.carousel-inner > .item > img {
+    margin: 0 auto;
+    width: 100%;
+}
+
+/*==dash==*/
+
+
+/*==menu==*/
+
+#search {
+    top: 8px;
+}
+
+#menubar {
+    background-color: #FFFFFF;
+    border-color:none !important;
+}
+
+#cart {
+    display: inline-block;
+    margin-top:15px;
+    margin-left: 15px;
+    background-color: white;
+    border: none;
+    color: #72B844;
+}
+
+
+#cart:hover {
+    color: #404040;
+}
+
+.navbar-nav li a, a {
+    font-size: 15px;
+    color: #6EA50C;
+    text-decoration: none;
+    font-family: 'Abel', sans-serif;
+}
+
+.navbar-default {
+        border-radius: 0px;
+
+}
+
+#menubox li a:hover {
+    background-color: #6EA50C;
+    color: #FFFFFF;
+    font-family: 'Abel', sans-serif;
+
+}
+
+@font-face {
+    font-family: 'abelregular';
+    src: url('fonts/abel-webfont.woff2') format('woff2'),
+         url('fonts/abel-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Fredericka the Great', cursive;
+    src: url('fonts/FrederickatheGreat-Regular.svg') format('svg'),
+         url('fonts/FrederickatheGreat-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+    
+}
+
+.categicon {
+    height: 20px;
+}
+
+#icon {
+    background-color: #6EA50C;
+}
+
+.btn {
+    background-color: #6EA50C;
+    color: #FFFFFF;
+    font-family: 'Abel', sans-serif;
+}
+
+
+/*==menu==*/
+
+
+/*==conteudo==*/
+
+#conteudo {
+    background-color: #FFFFFF;
+    min-height: 500px;
+
+}
+/*==conteudo==*/
+
+/*==footer==*/
+h2{
+    margin: 10px;
+    text-align: center;
+    font-family: 'Abel', sans-serif;
+    color: #FFFFFF;
+
+}
+
+footer {
+    background-image: url("../image/bglogo.jpg");
+    background-size: 500px 500px;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+footer h2, h4{
+    
+    font-family: 'Fredericka the Great', cursive;
+    color: #FFFFFF;
+    text-align: center;
+
+}
+
+/*==footer==*/
+
+
+/*==form==*/
+#form h4 {
+    color: #6EA50C;
+    text-align: left;
+}
+
+#form input[type=submit] {
+    background-color: #6EA50C;
+    color: #FFFFFF;
+    border: none;
+    padding: 8px;
+}
+
+#form textarea {
+    background-color: #6EA50C;
+    color: #FFFFFF;
+    border: none;
+    width: 200px;
+    height: 100px;
+    padding: 10px;
+}
+
+#form input[type=email], input[type=text]{
+    background-color: #6EA50C;
+    color: #FFFFFF;
+    border: none;
+    width: 200px;
+    height: 35px;
+    padding: 10px;
+}
+
+input[type=text]  {
+        background-color: #6EA50C;
+    color: #FFFFFF;
+    border: none;
+    width: 200px;
+    height: 35px;
+    padding: 10px;
+
+}
+
+/*Product*/
+
+.cart-icon {
+    height: 30px;
+}
+
+.product-img {
+    height: 100px;
+
+}
+
+.form-control::-webkit-input-placeholder { color: white; }  /* WebKit, Blink, Edge */
+.form-control:-moz-placeholder { color: white; }  /* Mozilla Firefox 4 to 18 */
+.form-control::-moz-placeholder { color: white; }  /* Mozilla Firefox 19+ */
+.form-control:-ms-input-placeholder { color: white; }  /* Internet Explorer 10-11 */
+.form-control::-ms-input-placeholder { color: white; }  /* Microsoft Edge */
+
+
+/*==form==*/
+
+
+
+
