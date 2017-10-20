@@ -392,7 +392,19 @@ input[type=text]  {
 
 /*Product Info*/
 
+/*error*/
 
+.groot {
+    background-color: #FFFFFF;
+}
+
+.erro {
+    width: 100%;
+    height: auto;
+    background-color: #FFFFFF;
+}
+
+/*error*/
 
 
 
