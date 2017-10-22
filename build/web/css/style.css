@@ -14,14 +14,14 @@ div .row {
 
 body {
     
-    background-image: url("../image/bglogo.jpg");
+    background-image: url('../image/bglogo.jpg');
     background-size: 500px 500px;
     margin:15px;
 
 }
 
 #corpo {
-    background-image: url("../image/bglogo.jpg");
+    background-image: url('../image/bglogo.jpg');
     background-size: 500px 500px;
     width: auto;
 }
@@ -212,7 +212,7 @@ footer h2, h4{
     padding: 10px;
 }
 
-#form input[type=email] input[type=text]{
+#form input[type="email"], input[type='text']{
     background-color: #6EA50C;
     color: #FFFFFF;
     border: none;
@@ -221,7 +221,7 @@ footer h2, h4{
     padding: 10px;
 }
 
-input[type=text]  {
+input[type='text']  {
     background-color: #6EA50C;
     color: #FFFFFF;
     border: none;
@@ -327,7 +327,7 @@ input[type=text]  {
     max-width:300px; 
 }
 
-.product-info input[type="text"]{
+.product-info input[type='text']{
     width: 45px;
     height: 28px;
     text-align: center;
@@ -335,7 +335,7 @@ input[type=text]  {
     margin-top: -5px;
 }
 
-.product-info input[type="submit"]{
+.product-info input[type='submit']{
 
     background-color: #6EA50C;
     width: 90px;
@@ -349,9 +349,8 @@ input[type=text]  {
     border-radius: 5px;
     box-shadow: 2px 2px 3px #808080;
     margin-bottom: 10px;
-
-    
 }
+
 
 .product-info label {
     font-weight: bold;
@@ -378,6 +377,7 @@ input[type=text]  {
     width: 30px;
     margin-top: -3px;
 }
+
 .dec {
     background-image: url('../image/decrease.png');
     background-repeat: no-repeat;
@@ -404,9 +404,34 @@ input[type=text]  {
     background-color: #FFFFFF;
 }
 
+
 /*error*/
 
+/*cart*/
+
+table tr td, table tr th {
+    padding-left: 50px;
+}
+
+/*cart*/
+
+/*registro produto*/
+
+input[type='file'] {
+    display: none;
+}
+
+.inputimg label {
+    background-image: url('../image/file.png');
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    color: transparent;
+}
+
+.registroprod {
+    background-color: #FFFFFF;
+}
 
 
-
-
+/*registro produto*/
