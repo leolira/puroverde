@@ -25,6 +25,10 @@ body {
     background-size: 500px 500px;
     width: auto;
 }
+
+#testebg{
+    background-color: #FFFFFF;
+}
 /*==geral==*/
 
 
@@ -318,6 +322,7 @@ input[type='text'], select  {
     background-color: #FFFFFF;
     padding: 0 50px 50px 50px;
 }
+
 
 
 .product-info h1 {

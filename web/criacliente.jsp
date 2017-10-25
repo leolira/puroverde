@@ -14,6 +14,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
          <script type="text/javascript" >
+        
     
     function limpa_formulário_cep() {
             //Limpa valores do formulário de cep.
@@ -88,118 +89,148 @@
         <% Cliente c;
            
         %>
-<div class="container">
-    <div class="row">				
-        <div class="col-lg-12 col-md-12 col-sm-12 col-sx-12">
-            <h1>Cadastrar Cliente</h1>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-sx-12">
-            <div class="box" id="preBox">
-                Para cadastrar-se preencha o formulário.
+        <div class="container" id="testebg">
+
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-8 col-sx-8">
+                    <div class="row">				
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-sx-12">
+                            <h1>Cadastrar Cliente</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-sx-12">
+                            <div class="box" id="preBox">
+                                Para cadastrar-se preencha o formulário.
+                            </div>
+                        </div>
+                    </div>    
+
+                    <div class="row">				
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-sx-12">
+                            <form method="post" action="?pg=CadastrarClienteServlet">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2">            
+                                        <h4>NOME:
+                                        <input name="nome" type="text" size="10" maxlength="50" />
+                                        </h4>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2"></div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2">                    
+                                        <h4>EMAIL:
+                                        <input name="email" type="email"  size="10" maxlength="50" required/>
+                                        </h4>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2">            
+                                        <h4>SENHA:
+                                            <input name="senha" type="password" size="10"  maxlength="50" />
+                                        </h4>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2"></div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2">                    
+                                        <h4>CPF:
+                                            <input name="cpf" type="text" size="10" maxlength="13" />
+                                        </h4>
+                                    </div>
+                                </div>                
+
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2">            
+                                        <h4>TELEFONE:
+                                            <input name="telefone" type="text" size="10" maxlength="13" />
+                                        </h4>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2"></div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2">                    
+                                        <h4>DATA NASC.:
+                                            <input name="dataNascimento" type="date" size="10" maxlength="50" />
+                                        </h4>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2">            
+                                        <h4>CEP:
+                                        <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
+                                               onblur="pesquisacep(this.value);" />
+                                        </h4>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2"></div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2">                    
+                                        <h4>RUA:
+                                        <input name="rua" type="text" id="rua" size="60" />
+                                        </h4>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2">            
+                                        <h4>NÚMERO:
+                                            <input name="numero" type="text" size="10" maxlength="5" />
+                                        </h4>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2"></div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2">                    
+                                        <h4>COMPLEMENTO:
+                                            <input name="complemento" type="text" size="10" maxlength="13" />
+                                        </h4>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2">            
+                                        <h4>BAIRRO:
+                                        <input name="bairro" type="text" id="bairro" size="40" />
+                                        </h4>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2"></div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2">                    
+                                        <h4>CIDADE:
+                                        <input name="cidade" type="text" id="cidade" size="40" />
+                                        </h4>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2">            
+                                        <h4>ESTADO:
+                                        <input name="uf" type="text" id="uf" size="2" />
+                                        </h4>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-sx-3"></div>
+                                </div>                 
+                                <input type="submit" value="cadastrar" class=""/>
+                            </form>
+                        </div>    
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-sx-4">
+                    <div class="row">				
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-sx-12">
+                            <h1>Fazer login</h1>
+                        </div>
+                    </div>
+                    
+                    <div class="row">				
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-sx-12">
+                            <form method="post" action="?pg=">
+                                <h4>EMAIL:
+                                <input name="email" type="email"  size="10" maxlength="50" required/>
+                                </h4>
+                                <h4>SENHA:
+                                <input name="senha" type="password" size="10"  maxlength="50" required />
+                                </h4>
+                                <br>
+                                <input type="submit" value="login"/>
+                            </form>
+                        </div>                
+
+                    </div>   
+                </div>
             </div>
         </div>
-    </div>    
-    
-    <div class="row">				
-        <div class="col-lg-12 col-md-12 col-sm-12 col-sx-12">
-            <form method="post" action="?pg=CadastrarClienteServlet">
-                <div class="row">
-                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2">            
-                        <h4>NOME:
-                        <input name="nome" type="text" size="10" maxlength="50" />
-                        </h4>
-                    </div>
-                    <div class="col-lg-1 col-md-1 col-sm-1 col-sx-1"></div>
-                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2">                    
-                        <h4>EMAIL:
-                        <input name="email" type="email"  size="10" maxlength="50" required/>
-                        </h4>
-                    </div>
-                </div>
-                
-                <div class="row">
-                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2">            
-                        <h4>SENHA:
-                            <input name="senha" type="password" size="10"  maxlength="50" />
-                        </h4>
-                    </div>
-                    <div class="col-lg-1 col-md-1 col-sm-1 col-sx-1"></div>
-                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2">                    
-                        <h4>CPF:
-                            <input name="cpf" type="text" size="10" maxlength="13" />
-                        </h4>
-                    </div>
-                </div>                
-
-                <div class="row">
-                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2">            
-                        <h4>TELEFONE:
-                            <input name="telefone" type="text" size="10" maxlength="13" />
-                        </h4>
-                    </div>
-                    <div class="col-lg-1 col-md-1 col-sm-1 col-sx-1"></div>
-                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2">                    
-                        <h4>DATA NASC.:
-                            <input name="dataNascimento" type="date" size="10" maxlength="50" />
-                        </h4>
-                    </div>
-                </div>
-                
-                <div class="row">
-                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2">            
-                        <h4>CEP:
-                        <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
-                               onblur="pesquisacep(this.value);" />
-                        </h4>
-                    </div>
-                    <div class="col-lg-1 col-md-1 col-sm-1 col-sx-1"></div>
-                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2">                    
-                        <h4>RUA:
-                        <input name="rua" type="text" id="rua" size="60" />
-                        </h4>
-                    </div>
-                </div>
-                
-                <div class="row">
-                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2">            
-                        <h4>NÚMERO:
-                            <input name="numero" type="text" size="10" maxlength="5" />
-                        </h4>
-                    </div>
-                    <div class="col-lg-1 col-md-1 col-sm-1 col-sx-1"></div>
-                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2">                    
-                        <h4>COMPLEMENTO:
-                            <input name="complemento" type="text" size="10" maxlength="13" />
-                        </h4>
-                    </div>
-                </div>
-                
-                <div class="row">
-                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2">            
-                        <h4>BAIRRO:
-                        <input name="bairro" type="text" id="bairro" size="40" />
-                        </h4>
-                    </div>
-                    <div class="col-lg-1 col-md-1 col-sm-1 col-sx-1"></div>
-                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2">                    
-                        <h4>CIDADE:
-                        <input name="cidade" type="text" id="cidade" size="40" />
-                        </h4>
-                    </div>
-                </div>
-                
-                <div class="row">
-                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2">            
-                        <h4>ESTADO:
-                        <input name="uf" type="text" id="uf" size="2" />
-                        </h4>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-3 col-sx-3"></div>
-                </div>                 
-                <input type="submit" value="cadastrar"/>
-            </form>
-        </div>    
     </body>
 </html>
