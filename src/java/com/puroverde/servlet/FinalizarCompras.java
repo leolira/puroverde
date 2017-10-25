@@ -1,14 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.puroverde.servlet;
 
+
+import com.projeto.puroverde.entity.Carrinho;
+import com.projeto.puroverde.entity.Cliente;
 import com.projeto.puroverde.entity.Vendas;
+import com.puroverde.service.CarrinhoService;
+import com.puroverde.service.ClienteService;
+import com.puroverde.service.VendasService;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Date;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -26,17 +27,36 @@ public class FinalizarCompras extends HttpServlet {
 
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        
         HttpSession session = req.getSession();
+
+        CarrinhoService carS = new CarrinhoService();
+        Vendas vendas = new Vendas();
+        Cliente cliente;
+        
         if(session.getAttribute("login")==null){
-            RequestDispatcher dispatcher = req.getRequestDispatcher("logar.jsp");
-            dispatcher.forward(req,resp);
+            resp.getWriter().print("<script> alert('Você ainda não possui cadastro!"
+                    + "por favor realize seu cadastro');</script>");
+            RequestDispatcher dispatcher = req.getRequestDispatcher("criacliente.jsp");
+            dispatcher.include(req,resp);
+            
+        }else{
+            ArrayList<Carrinho> lista = (ArrayList) session.getAttribute("lista");
+            cliente = (Cliente) session.getAttribute("login");
+          
+            vendas.setDataVenda(new Date());
+            vendas.setStatus("Em andamento"); 
+            
+            carS.salvarCarrinho(lista,vendas,cliente);
+            
+            session.removeValue("lista");
+             
+            req.setAttribute("lista", lista);
+            RequestDispatcher dispatcher = req.getRequestDispatcher("itensComprados.jsp");
+            dispatcher.include(req,resp);
+            
         }
        
-        
-        
-        
-        ArrayList<Vendas> lista = (ArrayList) session.getAttribute("lista");
-        
                 
     }
 

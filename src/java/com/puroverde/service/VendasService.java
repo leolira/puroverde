@@ -37,5 +37,21 @@ public class VendasService {
 		}
 		return lista;		
 	}
+   
+   public void salvar(Vendas venda){
+		EntityManager manager = fac.createEntityManager();
+		try{
+			manager.getTransaction().begin();
+			VendasDAO vendasDAO = new VendasDAO(manager);
+			vendasDAO.salvar(venda);
+			manager.getTransaction().commit();
+		}catch(Exception e){
+			manager.getTransaction().rollback();
+		}
+		finally{
+			manager.close();
+		}
+	}
+
     
 }

@@ -17,27 +17,21 @@ import javax.persistence.Query;
 public class VendasDAO extends AbstractDAO<Vendas>{
     
     public VendasDAO(EntityManager manager) {
-                
-		super(manager);
-	}
+        super(manager);
+    }
 
-    /**
-     *
-     * @return
-     */
     @Override
-	public Class<Vendas> getEntityClass() {
-		return Vendas.class;
-	}
+    public Class<Vendas> getEntityClass() {
+            return Vendas.class;
+    }
         
         
     public List<Vendas> listarVendas() {
-        //select d.descricao, p.nome, p.preco from Produto p 
-   //inner join p.detalhesProduto as d
-		Query query = manager.createQuery("select c  from Vendas c inner join fetch c.vendaProduto");
-		return query.getResultList();
+       
+        Query query = manager.createQuery("select c  from Vendas c inner join fetch c.vendaProduto");
+        return query.getResultList();
 
-	}
+    }
 }
     
 

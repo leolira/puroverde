@@ -9,7 +9,7 @@
     <body>
         <%
           Produto produto = (Produto)  request.getAttribute("p");
-        %>
+        %>          
         <h1>Editar Produto</h1>
         <form action="EditarProdutoServelet">
             <table>
@@ -23,8 +23,14 @@
                     <td>
                         <select name="categoria">
                             <option value="1" >Frutas</option>
-                            <option value="2" >Legumes
-                            </option>
+                            <option value="2" >Legumes</option>
+                            <option value="3" >Verduras</option>
+                            <option value="4" >Ovos</option>
+                            <option value="5" >Sucos</option>
+                            <option value="6" >Cookies</option>
+                            <option value="7" >Farinhas</option>
+                            <option value="8" >Laticínios</option>
+                            <option value="9" >Outros</option>
                         </select>
                     </td>
                 </tr>

@@ -113,5 +113,60 @@ public class ProdutoService {
 		}
 		return lista;		
 	}
+        
+        public List<Produto> BuscarProduto(){
+		
+		List<Produto> lista = null;
+		EntityManager manager = fac.createEntityManager();
+		try{
+			manager.getTransaction().begin();
+			ProdutoDAO produtoDAO = new ProdutoDAO(manager);
+			lista = (List) produtoDAO.listar();
+			manager.getTransaction().commit();
+		}catch(Exception e){
+			manager.getTransaction().rollback();
+		}
+		finally{
+			manager.close();
+		}
+		return lista;		
+	}
+        
+        public List<Produto> BuscarProduto(String nome){
+		
+		List<Produto> lista = null;
+		EntityManager manager = fac.createEntityManager();
+		try{
+			manager.getTransaction().begin();
+			ProdutoDAO produtoDAO = new ProdutoDAO(manager);
+			lista = (List) produtoDAO.buscaProduto(nome);
+			manager.getTransaction().commit();
+		}catch(Exception e){
+			manager.getTransaction().rollback();
+		}
+		finally{
+			manager.close();
+		}
+		return lista;		
+	}
+        
+        public List<Produto> BuscarProdutoCategoria(String categoria){
+		
+		List<Produto> lista = null;
+		EntityManager manager = fac.createEntityManager();
+		try{
+			manager.getTransaction().begin();
+			ProdutoDAO produtoDAO = new ProdutoDAO(manager);
+			lista = (List) produtoDAO.buscaProdutoCategoria(categoria);
+			manager.getTransaction().commit();
+		}catch(Exception e){
+			manager.getTransaction().rollback();
+		}
+		finally{
+			manager.close();
+		}
+		return lista;		
+	}
+
 
 }

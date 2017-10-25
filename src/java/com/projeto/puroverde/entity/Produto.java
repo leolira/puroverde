@@ -67,6 +67,7 @@ public class Produto extends AbstractEntity{
     }
 
     public double getValorUnitario() {
+        
         return valorUnitario;
     }
 
@@ -89,12 +90,7 @@ public class Produto extends AbstractEntity{
     public void setComentarios(List<Comentario> comentarios) {
         this.comentarios = comentarios;
     }
+    
+    
 
-    public void setNome(String parameter) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public void setUnidade(String parameter) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }

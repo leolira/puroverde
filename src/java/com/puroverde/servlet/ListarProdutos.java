@@ -21,14 +21,23 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "ListarProdutos", urlPatterns = {"/ListarProdutos"})
 public class ListarProdutos extends HttpServlet {
-
- 
-
-    @Override
-    protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
     
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         ProdutoService ps = new ProdutoService();
-        req.setAttribute("lista", ps.listar());
+        
+        String dado = req.getParameter("item");
+        String dado2 = req.getParameter("busca");
+       
+        
+        if(dado2!=null){
+             req.setAttribute("lista", ps.BuscarProduto(dado2));
+        }else if(dado!=null){
+            req.setAttribute("lista", ps.BuscarProdutoCategoria(dado));
+        }else{
+            req.setAttribute("lista", ps.listar());
+        }
+        
+        
         req.getRequestDispatcher("listadeprodutos.jsp").include(req, resp);
     
     }

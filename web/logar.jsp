@@ -12,7 +12,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Voce ainda não esta logado Otaro!</h1>
+        <h1>Usuário não logado!</h1>
         <h4><a href="">Realizar Login</a></h4>
     </body>
 </html>

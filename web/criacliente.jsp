@@ -6,6 +6,8 @@
 
 <%@page import="com.projeto.puroverde.entity.Cliente"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<meta charset="UTF-8">
+    
 <!DOCTYPE html>
 <html>
     <head>
@@ -86,44 +88,118 @@
         <% Cliente c;
            
         %>
-        
-        <h1>Cadastrar Cliente!</h1>
-       
-         <form method="post" action="..\CadastrarClienteServlet">
-            <label>Nome:
-            <input name="nome" type="text" size="10" maxlength="50" /></label><br/><br/>
-            <label>Email:
-                <input name="email" type="email" size="10" maxlength="50" /></label><br/><br/>
-            <label>Senha:
-                <input name="senha" type="password" size="10" maxlength="50" /></label><br/><br/>
-             
-            <label>CPF:
-                <input name="cpf" type="text" size="10" maxlength="13" /></label><br/><br/>
-            
-            <label>Telefone:
-                <input name="telefone" type="text" size="10" maxlength="13" /></label><br/><br/>
-            
-             <label>Data Nascimento:
-                 <input name="dataNascimento" type="date" size="10" maxlength="50" /></label><br/><br/>
-            
-            <label>Cep:
-            <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
-                   onblur="pesquisacep(this.value);" /></label><br /><br/>
-            <label>Rua:
-            <input name="rua" type="text" id="rua" size="60" /></label><br /><br />
-             <label>Numero:
-                <input name="numero" type="text" size="10" maxlength="13" /></label><br/><br/>
-              <label>Complemento:
-                <input name="complemento" type="text" size="10" maxlength="13" /></label><br/><br/>
-            <label>Bairro:
-            <input name="bairro" type="text" id="bairro" size="40" /></label><br /><br />
-            <label>Cidade:
-            <input name="cidade" type="text" id="cidade" size="40" /></label><br /><br />
-            <label>Estado:
-            <input name="uf" type="text" id="uf" size="2" /></label><br /><br />
-            
-             <label><input type="submit" value="cadastrar"/></label><br /><br />
-            
-      </form>
+<div class="container">
+    <div class="row">				
+        <div class="col-lg-12 col-md-12 col-sm-12 col-sx-12">
+            <h1>Cadastrar Cliente</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-sx-12">
+            <div class="box" id="preBox">
+                Para cadastrar-se preencha o formulário.
+            </div>
+        </div>
+    </div>    
+    
+    <div class="row">				
+        <div class="col-lg-12 col-md-12 col-sm-12 col-sx-12">
+            <form method="post" action="?pg=CadastrarClienteServlet">
+                <div class="row">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2">            
+                        <h4>NOME:
+                        <input name="nome" type="text" size="10" maxlength="50" />
+                        </h4>
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-sx-1"></div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2">                    
+                        <h4>EMAIL:
+                        <input name="email" type="email"  size="10" maxlength="50" required/>
+                        </h4>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2">            
+                        <h4>SENHA:
+                            <input name="senha" type="password" size="10"  maxlength="50" />
+                        </h4>
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-sx-1"></div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2">                    
+                        <h4>CPF:
+                            <input name="cpf" type="text" size="10" maxlength="13" />
+                        </h4>
+                    </div>
+                </div>                
+
+                <div class="row">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2">            
+                        <h4>TELEFONE:
+                            <input name="telefone" type="text" size="10" maxlength="13" />
+                        </h4>
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-sx-1"></div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2">                    
+                        <h4>DATA NASC.:
+                            <input name="dataNascimento" type="date" size="10" maxlength="50" />
+                        </h4>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2">            
+                        <h4>CEP:
+                        <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
+                               onblur="pesquisacep(this.value);" />
+                        </h4>
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-sx-1"></div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2">                    
+                        <h4>RUA:
+                        <input name="rua" type="text" id="rua" size="60" />
+                        </h4>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2">            
+                        <h4>NÚMERO:
+                            <input name="numero" type="text" size="10" maxlength="5" />
+                        </h4>
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-sx-1"></div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2">                    
+                        <h4>COMPLEMENTO:
+                            <input name="complemento" type="text" size="10" maxlength="13" />
+                        </h4>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2">            
+                        <h4>BAIRRO:
+                        <input name="bairro" type="text" id="bairro" size="40" />
+                        </h4>
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-sx-1"></div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2">                    
+                        <h4>CIDADE:
+                        <input name="cidade" type="text" id="cidade" size="40" />
+                        </h4>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-sx-2">            
+                        <h4>ESTADO:
+                        <input name="uf" type="text" id="uf" size="2" />
+                        </h4>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-sx-3"></div>
+                </div>                 
+                <input type="submit" value="cadastrar"/>
+            </form>
+        </div>    
     </body>
 </html>
